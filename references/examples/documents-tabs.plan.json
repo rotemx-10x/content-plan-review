@@ -1,0 +1,151 @@
+{
+  "schema": "content-plan-review/1",
+  "id": "git-basics-documents",
+  "pageTitle": "Git basics documents",
+  "title": "חומרי סיכום למפגש Git",
+  "planType": "documents",
+  "lang": "he",
+  "round": 1,
+  "summary": "Three student documents for the Git lesson: a summary, a command sheet and homework. This is the outline only: the documents, their headings and one line per section. The full text is written after approval.",
+  "facts": [
+    {
+      "label": "Audience",
+      "value": "Students, after the lesson"
+    },
+    {
+      "label": "Level of detail",
+      "value": "Outline: headings and one line each"
+    }
+  ],
+  "itemKinds": {
+    "heading": {
+      "label": "Heading",
+      "plural": "headings"
+    },
+    "exercise": {
+      "label": "Exercise",
+      "plural": "exercises"
+    }
+  },
+  "chips": [
+    "Make it shorter",
+    "Add an example",
+    "Split into two",
+    "Merge with the previous one",
+    "Move to another document"
+  ],
+  "groupChips": [
+    "Make this document shorter",
+    "Split this document",
+    "Merge with the previous document"
+  ],
+  "groups": [
+    {
+      "id": "doc-summary",
+      "display": "tab",
+      "kind": "document",
+      "title": "סיכום המפגש",
+      "summary": "Summary document. What was taught, in the order it was taught.",
+      "items": [
+        {
+          "id": "sum-01",
+          "kind": "heading",
+          "title": "מה זה ניהול גרסאות",
+          "body": "הבעיה ש-Git פותר, בשלוש הדוגמאות מהמפגש."
+        },
+        {
+          "id": "sum-02",
+          "kind": "heading",
+          "title": "commit: צילום מצב",
+          "body": "מה נשמר ב-commit, ואיך כותבים הודעה שמסבירה למה נעשה השינוי."
+        },
+        {
+          "id": "sum-03",
+          "kind": "heading",
+          "title": "ענפים ומיזוג",
+          "body": "מתי פותחים ענף, איך ממזגים, ומה עושים כשיש התנגשות."
+        }
+      ]
+    },
+    {
+      "id": "doc-commands",
+      "display": "tab",
+      "kind": "document",
+      "title": "דף פקודות",
+      "summary": "Reference sheet. One bullet per command, in the form command - what it does.",
+      "items": [
+        {
+          "id": "cmd-01",
+          "kind": "heading",
+          "title": "פקודות יומיומיות",
+          "body": "`git status`, `git add`, `git commit`, `git log`: שורה לכל פקודה, עם מה שהיא עושה ומתי משתמשים בה."
+        },
+        {
+          "id": "cmd-02",
+          "kind": "heading",
+          "title": "ענפים",
+          "body": "`git switch`, `git branch`, `git merge`: באותה צורה, לעבודה עם ענפים."
+        },
+        {
+          "id": "cmd-03",
+          "kind": "heading",
+          "lang": "en",
+          "title": "Common error messages",
+          "body": "The five messages beginners meet first, each with what it means and what to type next."
+        }
+      ]
+    },
+    {
+      "id": "doc-homework",
+      "display": "tab",
+      "kind": "document",
+      "title": "שיעורי הבית",
+      "summary": "Homework. Three tasks, each ends in a commit.",
+      "addKind": "exercise",
+      "items": [
+        {
+          "id": "hw-01",
+          "kind": "exercise",
+          "title": "מאגר ראשון",
+          "body": "יוצרים מאגר, מוסיפים קובץ אחד ושומרים commit ראשון."
+        },
+        {
+          "id": "hw-02",
+          "kind": "exercise",
+          "title": "ענף ומיזוג",
+          "body": "פותחים ענף, משנים שורה אחת, וממזגים חזרה לענף הראשי."
+        },
+        {
+          "id": "hw-03",
+          "kind": "exercise",
+          "title": "התנגשות",
+          "body": "יוצרים התנגשות בכוונה ופותרים אותה.",
+          "flags": [
+            {
+              "tone": "warn",
+              "text": "Harder than the first two. Consider marking it optional."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-glossary",
+      "question": "Should the glossary be a document of its own?",
+      "about": "doc-summary",
+      "options": [
+        {
+          "id": "inside",
+          "label": "No, a short glossary at the end of the summary"
+        },
+        {
+          "id": "own",
+          "label": "Yes, a fourth document"
+        }
+      ],
+      "recommended": "inside"
+    }
+  ]
+}

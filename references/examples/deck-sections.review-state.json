@@ -1,0 +1,55 @@
+{
+  "schema": "content-plan-review-state/1",
+  "planId": "git-basics-deck",
+  "round": 1,
+  "updatedAt": "2026-10-05T09:12:40.000Z",
+  "clientId": "c-example",
+  "planInstruction": "Keep every slide to three lines at most.",
+  "nodes": {
+    "s02": {
+      "status": "change",
+      "instruction": "Add GitHub as a fourth line"
+    },
+    "s06": {
+      "status": "change",
+      "instruction": "Make it shorter; Add an example"
+    },
+    "s08": {
+      "edits": {
+        "title": "סיכום המפגש"
+      }
+    },
+    "s01": {
+      "status": "remove",
+      "instruction": "Fold the three examples into the contents slide"
+    }
+  },
+  "added": {
+    "new-k4m2p9": {
+      "type": "item",
+      "kind": "slide",
+      "parent": "branches",
+      "title": "",
+      "body": "",
+      "instruction": "A slide that draws two branches and their merge as a diagram"
+    }
+  },
+  "order": {
+    "branches": [
+      "s06",
+      "new-k4m2p9",
+      "s07"
+    ]
+  },
+  "groupOrder": {},
+  "answers": {
+    "q-conflict-demo": {
+      "choice": "live",
+      "note": "Keep the screenshots as a backup slide"
+    }
+  },
+  "finish": {
+    "at": "2026-10-05T09:13:02.000Z",
+    "secondLook": true
+  }
+}

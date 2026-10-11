@@ -1,0 +1,168 @@
+{
+  "schema": "content-plan-review/1",
+  "id": "git-basics-quiz",
+  "pageTitle": "Git basics quiz",
+  "title": "שאלות לבדיקת הבנה: יסודות Git",
+  "planType": "quiz",
+  "lang": "he",
+  "round": 1,
+  "numbering": "continuous",
+  "summary": "A stand-alone question list for the Git lesson, by subject: three quiz questions and one poll. Each question shows its options and the correct answer; the explanation the student sees afterwards is under Explanation.",
+  "facts": [
+    {
+      "label": "Audience",
+      "value": "Students, after the lesson"
+    }
+  ],
+  "itemKinds": {
+    "quiz": {
+      "label": "Quiz",
+      "plural": "quiz questions",
+      "chips": [
+        "Make it easier",
+        "Make it harder",
+        "Add an option",
+        "Turn into a poll"
+      ]
+    },
+    "poll": {
+      "label": "Poll",
+      "plural": "polls"
+    }
+  },
+  "groups": [
+    {
+      "id": "sub-commits",
+      "display": "tab",
+      "kind": "subject",
+      "title": "גרסאות ו-commit",
+      "items": [
+        {
+          "id": "qz-01",
+          "kind": "quiz",
+          "title": "מה נשמר ב-commit",
+          "choices": {
+            "kind": "quiz",
+            "prompt": "מה נשמר ב-commit?",
+            "options": [
+              {
+                "id": "a",
+                "text": "רק הקבצים ששונו מאז ה-commit הקודם"
+              },
+              {
+                "id": "b",
+                "text": "צילום מצב של כל הקבצים במאגר"
+              },
+              {
+                "id": "c",
+                "text": "רק הודעת ה-commit"
+              }
+            ],
+            "correct": "b"
+          },
+          "fields": [
+            {
+              "key": "explanation",
+              "label": "Explanation",
+              "value": "Git שומר צילום מצב של כל הקבצים. קובץ שלא השתנה נשמר כהפניה לגרסה הקודמת."
+            }
+          ]
+        },
+        {
+          "id": "qz-02",
+          "kind": "quiz",
+          "title": "אזור ההכנה",
+          "choices": {
+            "kind": "quiz",
+            "prompt": "איזו פקודה מעבירה קובץ לאזור ההכנה?",
+            "options": [
+              {
+                "id": "a",
+                "text": "`git commit`"
+              },
+              {
+                "id": "b",
+                "text": "`git add`"
+              },
+              {
+                "id": "c",
+                "text": "`git push`"
+              }
+            ],
+            "correct": "b"
+          },
+          "fields": [
+            {
+              "key": "explanation",
+              "label": "Explanation",
+              "value": "`git add` מעביר את הקובץ לאזור ההכנה. `git commit` שומר את מה שנמצא שם."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sub-branches",
+      "display": "tab",
+      "kind": "subject",
+      "title": "ענפים ומיזוג",
+      "items": [
+        {
+          "id": "qz-03",
+          "kind": "quiz",
+          "title": "מתי נוצרת התנגשות",
+          "choices": {
+            "kind": "quiz",
+            "prompt": "מתי נוצרת התנגשות במיזוג?",
+            "options": [
+              {
+                "id": "a",
+                "text": "כששני הענפים שינו את אותה שורה"
+              },
+              {
+                "id": "b",
+                "text": "כששני הענפים שינו קבצים שונים"
+              },
+              {
+                "id": "c",
+                "text": "בכל מיזוג"
+              }
+            ],
+            "correct": "a"
+          },
+          "fields": [
+            {
+              "key": "explanation",
+              "label": "Explanation",
+              "value": "Git ממזג לבד שינויים בשורות שונות. התנגשות נוצרת רק כששני הענפים שינו את אותה שורה."
+            }
+          ]
+        },
+        {
+          "id": "pl-01",
+          "kind": "poll",
+          "title": "ניסיון קודם ב-Git",
+          "body": "סקר פתיחה, בלי תשובה נכונה.",
+          "choices": {
+            "kind": "poll",
+            "prompt": "כמה פעמים השתמשתם ב-Git לפני הקורס?",
+            "options": [
+              {
+                "id": "a",
+                "text": "אף פעם"
+              },
+              {
+                "id": "b",
+                "text": "פעם או פעמיים"
+              },
+              {
+                "id": "c",
+                "text": "באופן קבוע"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

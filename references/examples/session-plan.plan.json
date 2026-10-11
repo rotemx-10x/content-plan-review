@@ -1,0 +1,132 @@
+{
+  "schema": "content-plan-review/1",
+  "id": "git-session-plan",
+  "pageTitle": "Git session plan",
+  "title": "תוכנית מפגש: יסודות Git",
+  "planType": "session-plan",
+  "lang": "he",
+  "round": 1,
+  "summary": "The plan of one meeting: what is taught, in which order, and where the students practise. Four parts. The deck and the documents get their own reviews.",
+  "facts": [
+    {
+      "label": "Format",
+      "value": "One meeting"
+    },
+    {
+      "label": "Needs",
+      "value": "Git installed on every laptop"
+    }
+  ],
+  "itemKinds": {
+    "topic": {
+      "label": "Topic",
+      "plural": "topics"
+    },
+    "exercise": {
+      "label": "Exercise",
+      "plural": "exercises"
+    },
+    "quiz": {
+      "label": "Quiz",
+      "plural": "quizzes"
+    }
+  },
+  "chips": [
+    "Make it shorter",
+    "Add an example",
+    "Split into two",
+    "Merge with the previous one",
+    "Turn into an exercise"
+  ],
+  "groups": [
+    {
+      "id": "p-open",
+      "kind": "part",
+      "title": "פתיחה וחזרה",
+      "items": [
+        {
+          "id": "t-01",
+          "kind": "topic",
+          "title": "חזרה על המפגש הקודם",
+          "body": "שלוש שאלות קצרות על שורת הפקודה."
+        },
+        {
+          "id": "t-02",
+          "kind": "topic",
+          "title": "מה נלמד היום",
+          "body": "גרסאות, ענפים ומיזוג, ולמה הם נדרשים לפני עבודה בצוות."
+        }
+      ]
+    },
+    {
+      "id": "p-lecture",
+      "kind": "part",
+      "title": "הרצאה: גרסאות ו-commit",
+      "items": [
+        {
+          "id": "t-03",
+          "kind": "topic",
+          "title": "שלושת האזורים של Git",
+          "body": "תיקיית העבודה, אזור ההכנה והמאגר, עם הדגמה חיה."
+        },
+        {
+          "id": "t-04",
+          "kind": "topic",
+          "title": "כתיבת הודעת commit",
+          "body": "שלוש הודעות טובות ושלוש חלשות, והכלל שמבדיל ביניהן."
+        },
+        {
+          "id": "x-01",
+          "kind": "quiz",
+          "title": "בדיקת הבנה: מה נשמר ב-commit",
+          "body": "שאלה אחת מתוך המצגת, לפני המעבר לתרגול."
+        }
+      ]
+    },
+    {
+      "id": "p-practice",
+      "kind": "part",
+      "title": "תרגול מודרך",
+      "addKind": "exercise",
+      "items": [
+        {
+          "id": "e-01",
+          "kind": "exercise",
+          "title": "מאגר ראשון",
+          "body": "כל משתתף יוצר מאגר ושומר שני commits.",
+          "flags": [
+            {
+              "tone": "info",
+              "text": "Needs Git installed on every laptop before class."
+            }
+          ]
+        },
+        {
+          "id": "e-02",
+          "kind": "exercise",
+          "title": "ענף ומיזוג בזוגות",
+          "body": "אחד פותח ענף ומשנה קובץ, השני ממזג ופותר התנגשות."
+        }
+      ]
+    },
+    {
+      "id": "p-close",
+      "kind": "part",
+      "title": "סיכום ושיעורי בית",
+      "items": [
+        {
+          "id": "t-05",
+          "kind": "topic",
+          "title": "סיכום",
+          "body": "שלושת המושגים של המפגש, ושאלות מהכיתה."
+        },
+        {
+          "id": "t-06",
+          "kind": "topic",
+          "title": "שיעורי בית",
+          "body": "שלושת התרגילים מדף התרגיל, להגשה עד המפגש הבא."
+        }
+      ]
+    }
+  ]
+}

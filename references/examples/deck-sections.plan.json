@@ -1,0 +1,227 @@
+{
+  "schema": "content-plan-review/1",
+  "id": "git-basics-deck",
+  "pageTitle": "Git basics deck",
+  "title": "יסודות Git: גרסאות, ענפים ומיזוג",
+  "planType": "deck",
+  "lang": "he",
+  "round": 1,
+  "summary": "One class deck for the first Git lesson: what a version is, how a commit is made and how branches merge. Eight slides in four sections, with one quiz.",
+  "facts": [
+    {
+      "label": "Audience",
+      "value": "Beginners with no Git experience"
+    },
+    {
+      "label": "Interactions",
+      "value": "One quiz with an answer slide"
+    }
+  ],
+  "itemKinds": {
+    "slide": {
+      "label": "Slide",
+      "plural": "slides"
+    },
+    "quiz": {
+      "label": "Quiz",
+      "plural": "quizzes",
+      "chips": [
+        "Make it easier",
+        "Make it harder",
+        "Add an option",
+        "Turn into a poll"
+      ]
+    }
+  },
+  "groups": [
+    {
+      "id": "open",
+      "kind": "section",
+      "title": "פתיחה",
+      "summary": "למה צריך ניהול גרסאות, ומה נלמד במפגש.",
+      "items": [
+        {
+          "id": "s01",
+          "kind": "slide",
+          "label": "lead",
+          "title": "למה צריך ניהול גרסאות",
+          "body": "שלושה מצבים מוכרים: קובץ שנדרס, שינוי ששבר את הקוד, שני אנשים שערכו את אותו קובץ.\nGit שומר כל גרסה, כך שאפשר לחזור לכל נקודה בזמן."
+        },
+        {
+          "id": "s02",
+          "kind": "slide",
+          "label": "cards",
+          "title": "מה נלמד במפגש",
+          "body": "גרסה ו-commit\nענף ומיזוג\nהתנגשות ופתרונה"
+        }
+      ]
+    },
+    {
+      "id": "commits",
+      "kind": "section",
+      "title": "גרסאות ו-commit",
+      "summary": "שלושת האזורים של Git, ומה נשמר בכל commit.",
+      "items": [
+        {
+          "id": "s03",
+          "kind": "slide",
+          "label": "split",
+          "title": "שלושת האזורים של Git",
+          "body": "תיקיית העבודה, אזור ההכנה והמאגר.\nקובץ עובר בין האזורים בעזרת `git add` ולאחר מכן `git commit`.",
+          "figure": {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 200\" font-family=\"Helvetica, Arial, sans-serif\" font-size=\"15\"><rect width=\"640\" height=\"200\" fill=\"#ffffff\"/><g fill=\"#eef2f7\" stroke=\"#5b6b82\" stroke-width=\"1.5\"><rect x=\"20\" y=\"60\" width=\"150\" height=\"80\" rx=\"8\"/><rect x=\"245\" y=\"60\" width=\"150\" height=\"80\" rx=\"8\"/><rect x=\"470\" y=\"60\" width=\"150\" height=\"80\" rx=\"8\"/></g><g fill=\"#1f2a3a\" text-anchor=\"middle\"><text x=\"95\" y=\"105\">Working directory</text><text x=\"320\" y=\"105\">Staging area</text><text x=\"545\" y=\"105\">Repository</text></g><g stroke=\"#5b6b82\" stroke-width=\"2\" fill=\"none\"><path d=\"M170 100 H236\"/><path d=\"M395 100 H461\"/></g><g fill=\"#5b6b82\"><path d=\"M245 100 l-10 -6 v12 z\"/><path d=\"M470 100 l-10 -6 v12 z\"/></g><g fill=\"#5b6b82\" font-size=\"12\" text-anchor=\"middle\"><text x=\"207\" y=\"88\">git add</text><text x=\"432\" y=\"88\">git commit</text></g></svg>",
+            "caption": "שלושת האזורים והפקודות שמעבירות קובץ ביניהם",
+            "alt": "שלוש תיבות: תיקיית העבודה, אזור ההכנה והמאגר, עם חץ בין כל שתיים"
+          },
+          "fields": [
+            {
+              "key": "build",
+              "label": "Build notes",
+              "lang": "en",
+              "value": "`split` with the figure on the start side. The three boxes are labelled תיקיית העבודה, אזור ההכנה and המאגר, with `git add` and `git commit` on the arrows."
+            }
+          ]
+        },
+        {
+          "id": "s04",
+          "kind": "slide",
+          "label": "split",
+          "title": "commit הוא צילום מצב",
+          "body": "כל commit שומר את מצב כל הקבצים באותו רגע.\nלכל commit יש מזהה, מחבר, תאריך והודעה.\nהודעה טובה מסבירה למה נעשה השינוי.",
+          "fields": [
+            {
+              "key": "notes",
+              "label": "Presenter notes",
+              "value": "להדגים `git log --oneline` על מאגר הדוגמה."
+            }
+          ],
+          "flags": [
+            {
+              "tone": "info",
+              "text": "Depends on the demo repository being cloned before class."
+            }
+          ]
+        },
+        {
+          "id": "q01",
+          "kind": "quiz",
+          "label": "lead",
+          "title": "שאלה: מה נשמר ב-commit?",
+          "body": "שאלה אחת לבדיקת הבנה, לפני המעבר לענפים.",
+          "choices": {
+            "kind": "quiz",
+            "prompt": "מה נשמר ב-commit?",
+            "options": [
+              {
+                "id": "a",
+                "text": "רק הקבצים ששונו מאז ה-commit הקודם"
+              },
+              {
+                "id": "b",
+                "text": "צילום מצב של כל הקבצים במאגר"
+              },
+              {
+                "id": "c",
+                "text": "רק הודעת ה-commit"
+              }
+            ],
+            "correct": "b"
+          },
+          "links": [
+            {
+              "to": "s05",
+              "label": "Answer slide",
+              "needs": true
+            }
+          ]
+        },
+        {
+          "id": "s05",
+          "kind": "slide",
+          "label": "lead",
+          "title": "הסבר התשובה",
+          "body": "Git שומר צילום מצב של כל הקבצים, ולא רשימת הבדלים.\nקובץ שלא השתנה נשמר כהפניה לגרסה הקודמת, ולכן המאגר נשאר קטן.",
+          "links": [
+            {
+              "to": "q01",
+              "label": "Quiz",
+              "needs": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "branches",
+      "kind": "section",
+      "title": "ענפים ומיזוג",
+      "summary": "ענף כקו עבודה נפרד, מיזוג, ומה עושים כשיש התנגשות.",
+      "items": [
+        {
+          "id": "s06",
+          "kind": "slide",
+          "label": "split",
+          "title": "ענף הוא קו עבודה נפרד",
+          "body": "ענף מאפשר לפתח יכולת חדשה בלי לגעת בקוד היציב.\n`git switch -c feature` יוצר ענף חדש ועובר אליו."
+        },
+        {
+          "id": "s07",
+          "kind": "slide",
+          "label": "split",
+          "title": "מיזוג והתנגשות",
+          "body": "`git merge` מחבר את השינויים משני הענפים.\nהתנגשות נוצרת כששני הענפים שינו את אותה שורה, ואז בוחרים ידנית מה נשאר."
+        }
+      ]
+    },
+    {
+      "id": "close",
+      "kind": "section",
+      "title": "סיכום",
+      "items": [
+        {
+          "id": "s08",
+          "kind": "slide",
+          "label": "cards",
+          "title": "סיכום ומה הלאה",
+          "body": "שלושת המושגים: commit, ענף, מיזוג.\nבמפגש הבא: עבודה מול GitHub ובקשות מיזוג."
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-conflict-demo",
+      "question": "Should the merge conflict be shown live or as screenshots?",
+      "detail": "A live conflict takes about five minutes and can go wrong on the projector.",
+      "about": "s07",
+      "options": [
+        {
+          "id": "shots",
+          "label": "Two screenshots",
+          "detail": "Predictable, and readable later in the deck."
+        },
+        {
+          "id": "live",
+          "label": "Live in the terminal",
+          "detail": "More convincing, less predictable."
+        }
+      ],
+      "recommended": "shots"
+    },
+    {
+      "id": "q-github",
+      "question": "Does this deck include a first look at GitHub?",
+      "options": [
+        {
+          "id": "no",
+          "label": "No, keep it for the next lesson"
+        },
+        {
+          "id": "yes",
+          "label": "Yes, add two slides at the end"
+        }
+      ],
+      "recommended": "no"
+    }
+  ]
+}

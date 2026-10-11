@@ -1,0 +1,129 @@
+{
+  "schema": "content-plan-review/1",
+  "id": "git-basics-deck-revision",
+  "pageTitle": "Git deck revision",
+  "title": "עדכון המצגת: יסודות Git",
+  "planType": "deck",
+  "lang": "he",
+  "round": 1,
+  "summary": "A revision of the published Git deck. Sections with no change start closed. A flag says what changes on a card, and the published text is kept under Current version.",
+  "facts": [
+    {
+      "label": "Changes",
+      "value": "1 slide reworded, 1 slide added, 1 slide proposed for removal"
+    }
+  ],
+  "itemKinds": {
+    "slide": {
+      "label": "Slide",
+      "plural": "slides"
+    },
+    "quiz": {
+      "label": "Quiz",
+      "plural": "quizzes"
+    }
+  },
+  "groups": [
+    {
+      "id": "open",
+      "kind": "section",
+      "title": "פתיחה",
+      "collapsed": true,
+      "summary": "No change in this section.",
+      "items": [
+        {
+          "id": "s01",
+          "kind": "slide",
+          "title": "למה צריך ניהול גרסאות",
+          "body": "שלושה מצבים מוכרים: קובץ שנדרס, שינוי ששבר את הקוד, שני אנשים שערכו את אותו קובץ."
+        },
+        {
+          "id": "s02",
+          "kind": "slide",
+          "title": "מה נלמד במפגש",
+          "body": "גרסה ו-commit\nענף ומיזוג\nהתנגשות ופתרונה"
+        }
+      ]
+    },
+    {
+      "id": "commits",
+      "kind": "section",
+      "title": "גרסאות ו-commit",
+      "summary": "One slide reworded, one added, one proposed for removal.",
+      "items": [
+        {
+          "id": "s04",
+          "kind": "slide",
+          "title": "commit הוא צילום מצב",
+          "body": "כל commit שומר את מצב כל הקבצים באותו רגע.\nהודעה טובה מסבירה למה נעשה השינוי.",
+          "flags": [
+            {
+              "tone": "info",
+              "text": "Changed: two lines instead of three."
+            }
+          ],
+          "fields": [
+            {
+              "key": "current",
+              "label": "Current version",
+              "value": "כל commit שומר את מצב כל הקבצים באותו רגע.\nלכל commit יש מזהה, מחבר, תאריך והודעה.\nהודעה טובה מסבירה למה נעשה השינוי."
+            }
+          ]
+        },
+        {
+          "id": "s04b",
+          "kind": "slide",
+          "title": "מה כולל commit",
+          "body": "מזהה, מחבר, תאריך והודעה.\n`git log --oneline` מציג אותם בשורה אחת.",
+          "flags": [
+            {
+              "tone": "info",
+              "text": "New in this revision."
+            }
+          ]
+        },
+        {
+          "id": "q01",
+          "kind": "quiz",
+          "label": "lead",
+          "title": "שאלה: מה נשמר ב-commit?",
+          "choices": {
+            "kind": "quiz",
+            "prompt": "מה נשמר ב-commit?",
+            "options": [
+              {
+                "id": "a",
+                "text": "רק הקבצים ששונו מאז ה-commit הקודם"
+              },
+              {
+                "id": "b",
+                "text": "צילום מצב של כל הקבצים במאגר"
+              },
+              {
+                "id": "c",
+                "text": "רק הודעת ה-commit"
+              }
+            ],
+            "correct": "b"
+          },
+          "locks": {
+            "remove": "Students already answered this quiz. It can be reworded, not removed.",
+            "move": "Its place in the deck is tied to the answers already given."
+          }
+        },
+        {
+          "id": "s05",
+          "kind": "slide",
+          "title": "אזור ההכנה בפירוט",
+          "body": "שקופית העמקה על אזור ההכנה.",
+          "flags": [
+            {
+              "tone": "warn",
+              "text": "Proposed for removal: mark Remove to confirm, or Accept to keep it."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
